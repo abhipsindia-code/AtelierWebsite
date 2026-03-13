@@ -453,48 +453,69 @@ function Philosophy() {
   );
 }
 function Process() {
-  const steps = [/* same array */];
+  const steps = [
+    {
+      title: "Consultation & Brief",
+      desc: "Understanding spatial needs, site conditions, timelines and execution priorities."
+    },
+    {
+      title: "Design Strategy",
+      desc: "Planning layouts, material direction and functional zoning aligned with project intent."
+    },
+    {
+      title: "Technical Planning",
+      desc: "Detailed drawings, vendor coordination and milestone definition before site mobilisation."
+    },
+    {
+      title: "Site Execution",
+      desc: "Disciplined supervision, quality checks and structured progress tracking."
+    },
+    {
+      title: "Finishing & Handover",
+      desc: "Final detailing, deep cleaning and walkthrough before project closure."
+    }
+  ];
 
   return (
-    <section className="bg-[var(--color-atsection)] py-[180px]">
+    <section className="bg-[var(--color-atsection)] py-[140px]">
 
-      <div className="max-w-[1520px] mx-auto px-8">
+      <div className="max-w-[1280px] mx-auto px-8">
 
-        <div className="grid md:grid-cols-2 gap-24 items-end mb-20">
-          <div>
-            <div className="text-[var(--color-atbronze)] tracking-[0.18em] text-sm uppercase">
-              Process
-            </div>
-
-            <h2 className="mt-6 text-[40px] md:text-[56px] font-light leading-tight text-[var(--color-atheading)]">
-              A structured journey from concept to completion.
-            </h2>
+        {/* Intro */}
+        <div className="text-center mb-20">
+          <div className="text-[var(--color-atbronze)] tracking-[0.2em] text-sm uppercase">
+            Process
           </div>
 
-          <div className="text-[var(--color-attext)] leading-relaxed max-w-[420px]">
-            Every project follows a disciplined execution framework ensuring clarity at every stage.
-          </div>
+          <h2 className="mt-6 text-[44px] md:text-[56px] font-light text-[var(--color-atheading)]">
+            A disciplined path from concept to completion.
+          </h2>
+
+          <p className="mt-6 text-[var(--color-attext)] max-w-[560px] mx-auto">
+            Each project follows a structured execution journey ensuring clarity,
+            coordination and confidence at every stage.
+          </p>
         </div>
 
-        <div className="relative border-l border-[var(--color-atborder)] ml-4">
+        {/* Cards Timeline */}
+        <div className="grid md:grid-cols-5 gap-8">
 
           {steps.map((step, i) => (
-            <div key={i} className="mb-20 pl-12 relative">
-
-              <div className="absolute -left-[9px] top-2 w-4 h-4 bg-[var(--color-atbronze)]"></div>
-
-              <div className="text-[var(--color-atbronze)] text-sm tracking-[0.2em] mb-3">
+            <div
+              key={i}
+              className="bg-white border border-[var(--color-atborder)] p-8 rounded-xl shadow-sm hover:shadow-md transition"
+            >
+              <div className="text-[var(--color-atbronze)] text-sm tracking-[0.2em] mb-4">
                 {String(i + 1).padStart(2, "0")}
               </div>
 
-              <div className="text-[26px] font-light text-[var(--color-atheading)]">
+              <div className="text-[20px] font-medium text-[var(--color-atheading)]">
                 {step.title}
               </div>
 
-              <div className="mt-3 text-[var(--color-attext)] max-w-[520px] leading-relaxed">
+              <div className="mt-4 text-[var(--color-attext)] text-sm leading-relaxed">
                 {step.desc}
               </div>
-
             </div>
           ))}
 
