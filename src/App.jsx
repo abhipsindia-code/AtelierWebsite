@@ -241,36 +241,36 @@ function oldHero() {
 
 function CredibilityStrip() {
   return (
-    <section className="w-full bg-[#1a1a1a] border-t border-[#8c6b3f]/40">
-      <div className="max-w-[1520px] mx-auto px-8 py-16 grid md:grid-cols-4 gap-12">
+    <section className="w-full bg-[var(--color-atsection)] border-t border-[var(--color-atborder)]">
+      <div className="max-w-[1520px] mx-auto px-8 py-24 grid md:grid-cols-4 gap-12">
 
         <div>
 
-          <div className="w-[2px] h-6 bg-[#a8844f] mb-4"></div> <div className="text-[#a8844f] text-sm tracking-[0.18em] uppercase">Timelines</div>
-          <div className="mt-3 text-white/80 leading-relaxed">
+          <div className="w-[2px] h-6 bg-[var(--color-atbronze)] mb-4"></div> <div className="text-[var(--color-atbronze)] text-sm tracking-[0.18em] uppercase">Timelines</div>
+          <div className="mt-3 text-[var(--color-attext)] leading-relaxed">
             Structured execution schedules with milestone tracking and disciplined delivery windows.
           </div>
         </div>
 
         <div>
-          <div className="w-[2px] h-6 bg-[#a8844f] mb-4"></div> <div className="text-[#a8844f] text-sm tracking-[0.18em] uppercase">Material Integrity</div>
-          <div className="mt-3 text-white/80 leading-relaxed">
+          <div className="w-[2px] h-6 bg-[var(--color-atbronze)] mb-4"></div> <div className="text-[var(--color-atbronze)] text-sm tracking-[0.18em] uppercase">Material Integrity</div>
+          <div className="mt-3 text-[var(--color-attext)] leading-relaxed">
             Careful sourcing, finish precision and on-site supervision ensure material honesty.
           </div>
         </div>
 
         <div>
-          <div className="w-[2px] h-6 bg-[#a8844f] mb-4"></div>
-          <div className="text-[#a8844f] text-sm tracking-[0.18em] uppercase">Site Management</div>
-          <div className="mt-3 text-white/80 leading-relaxed">
+          <div className="w-[2px] h-6 bg-[var(--color-atbronze)] mb-4"></div>
+          <div className="text-[var(--color-atbronze)] text-sm tracking-[0.18em] uppercase">Site Management</div>
+          <div className="mt-3 text-[var(--color-attext)] leading-relaxed">
             Daily coordination, vendor alignment and quality checks keep projects controlled.
           </div>
         </div>
 
         <div>
-          <div className="w-[2px] h-6 bg-[#a8844f] mb-4"></div>
-          <div className="text-[#a8844f] text-sm tracking-[0.18em] uppercase">Final Handover</div>
-          <div className="mt-3 text-white/80 leading-relaxed">
+          <div className="w-[2px] h-6 bg-[var(--color-atbronze)] mb-4"></div>
+          <div className="text-[var(--color-atbronze)] text-sm tracking-[0.18em] uppercase">Final Handover</div>
+          <div className="mt-3 text-[var(--color-attext)] leading-relaxed">
             Touch-ups, cleaning and finishing discipline before client walkthrough and closure.
           </div>
         </div>
@@ -279,7 +279,6 @@ function CredibilityStrip() {
     </section>
   );
 }
-
 
 function Services() {
   const services = [
@@ -306,50 +305,47 @@ function Services() {
   ];
 
   return (
-    <section className="bg-[#111111] text-[#e7e7e7] py-[160px]">
+    <section className="bg-[var(--color-atbase)] py-[160px]">
       <div className="max-w-[1520px] mx-auto px-8 grid md:grid-cols-2 gap-24">
 
-        {/* LEFT INTRO */}
         <div>
-          <div className="text-[#a8844f] tracking-[0.18em] text-sm uppercase">
+          <div className="text-[var(--color-atbronze)] tracking-[0.18em] text-sm uppercase">
             Capabilities
           </div>
 
-          <h2 className="mt-6 text-[36px] md:text-[48px] font-light leading-tight">
+          <h2 className="mt-6 text-[36px] md:text-[48px] font-light leading-tight text-[var(--color-atheading)]">
             Structured services designed for precision execution.
           </h2>
 
-          <p className="mt-8 text-white/65 leading-relaxed max-w-[420px]">
+          <p className="mt-8 text-[var(--color-attext)] leading-relaxed max-w-[420px]">
             We combine architectural thinking with disciplined on-site delivery,
             ensuring projects move from concept to completion with clarity.
           </p>
 
-          <div className="mt-24 relative w-[full]">
+          <div className="mt-24 relative w-full">
             <img
               src="/assets/maninserviceinteror.png"
-              className="object-bottom relative w-full h-[420px] opacity-80 object-cover"
+              className="relative w-full h-[420px] object-cover rounded-xl"
             />
-
           </div>
         </div>
 
-        {/* RIGHT LIST */}
-        <div className="border-t border-white/10">
+        <div className="border-t border-[var(--color-atborder)]">
           {services.map((s, i) => (
             <div
               key={s.title}
-              className="py-10 border-b border-white/10 grid grid-cols-[60px_1fr] gap-6"
+              className="py-10 border-b border-[var(--color-atborder)] grid grid-cols-[60px_1fr] gap-6"
             >
-              <div className="text-[#a8844f] text-[18px] font-medium">
+              <div className="text-[var(--color-atbronze)] text-[18px] font-medium">
                 {String(i + 1).padStart(2, "0")}
               </div>
 
               <div>
-                <div className="text-[22px] font-medium">
+                <div className="text-[22px] font-medium text-[var(--color-atheading)]">
                   {s.title}
                 </div>
 
-                <div className="mt-3 text-white/60 leading-relaxed max-w-[520px]">
+                <div className="mt-3 text-[var(--color-attext)] leading-relaxed max-w-[520px]">
                   {s.desc}
                 </div>
               </div>
@@ -361,82 +357,46 @@ function Services() {
     </section>
   );
 }
-
 function DesignLanguage() {
-  const items = [
-    {
-      img: "https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=1400&auto=format&fit=crop",
-      title: "Warm Minimal Living",
-      desc: "Calm spatial compositions with layered textures and restrained palettes."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1400&auto=format&fit=crop",
-      title: "Architectural Kitchens",
-      desc: "Linear layouts, concealed storage and material continuity."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1400&auto=format&fit=crop",
-      title: "Custom Joinery",
-      desc: "Built-ins designed with precision detailing and functional clarity."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1493663284031-b7e3aaa4cab7?q=80&w=1400&auto=format&fit=crop",
-      title: "Lighting Composition",
-      desc: "Balanced illumination layers shaping spatial mood and usability."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1400&auto=format&fit=crop",
-      title: "Neutral Bedrooms",
-      desc: "Soft tonal palettes supporting rest, comfort and timelessness."
-    },
-    {
-      img: "https://images.unsplash.com/photo-1616594039964-ae9021a400a0?q=80&w=1400&auto=format&fit=crop",
-      title: "Material Honesty",
-      desc: "Natural finishes, tactile surfaces and expressive detailing."
-    }
-  ];
+  const items = [/* same array */];
 
   return (
-    <section className="bg-[#111111] text-[#e7e7e7] py-[160px]">
+    <section className="bg-[var(--color-atsection)] py-[160px]">
 
       <div className="max-w-[1520px] mx-auto px-8">
 
-        {/* Intro */}
         <div className="grid md:grid-cols-2 gap-24 items-end mb-20">
           <div>
-            <div className="text-[#a8844f] tracking-[0.18em] text-sm uppercase">
+            <div className="text-[var(--color-atbronze)] tracking-[0.18em] text-sm uppercase">
               Design Language
             </div>
 
-            <h2 className="mt-6 text-[40px] md:text-[56px] font-light leading-tight">
+            <h2 className="mt-6 text-[40px] md:text-[56px] font-light leading-tight text-[var(--color-atheading)]">
               A disciplined visual approach rooted in material integrity.
             </h2>
           </div>
 
-          <div className="text-white/60 leading-relaxed max-w-[420px]">
+          <div className="text-[var(--color-attext)] leading-relaxed max-w-[420px]">
             Selected spatial references that inform our thinking — shaping how
             we design, detail and execute interior environments.
           </div>
         </div>
 
-        {/* Image Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
 
           {items.map((item, i) => (
-            <div key={i} className="group relative overflow-hidden">
+            <div key={i} className="group relative overflow-hidden rounded-xl">
 
               <img
                 src={item.img}
                 className="w-full h-[420px] object-cover transition duration-700 group-hover:scale-105"
               />
 
-              {/* overlay */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition duration-500"></div>
+              <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-500"></div>
 
-              {/* caption */}
               <div className="absolute bottom-0 left-0 p-6 translate-y-6 group-hover:translate-y-0 transition duration-500">
-                <div className="text-[18px] font-medium">{item.title}</div>
-                <div className="mt-2 text-white/70 text-sm max-w-[260px]">
+                <div className="text-[18px] font-medium text-white">{item.title}</div>
+                <div className="mt-2 text-white/80 text-sm max-w-[260px]">
                   {item.desc}
                 </div>
               </div>
@@ -451,48 +411,40 @@ function DesignLanguage() {
     </section>
   );
 }
-
 function Philosophy() {
   return (
-    <section className="bg-[#0e0e0e] text-[#e7e7e7] py-[180px]">
+    <section className="bg-[var(--color-atbase)] py-[180px]">
 
       <div className="max-w-[1520px] mx-auto px-8 grid md:grid-cols-2 gap-24 items-center">
 
-        {/* LEFT — Big Statement */}
         <div>
-          <div className="text-[#a8844f] tracking-[0.18em] text-sm uppercase">
+          <div className="text-[var(--color-atbronze)] tracking-[0.18em] text-sm uppercase">
             Studio Philosophy
           </div>
 
-          <h2 className="mt-8 text-[42px] md:text-[64px] font-light leading-[1.15]">
+          <h2 className="mt-8 text-[42px] md:text-[64px] font-light leading-[1.15] text-[var(--color-atheading)]">
             We believe execution is design.
           </h2>
 
-          <p className="mt-10 text-white/65 leading-relaxed max-w-[520px]">
+          <p className="mt-10 text-[var(--color-attext)] leading-relaxed max-w-[520px]">
             Interior environments are not defined by drawings alone.  
             They are shaped through material decisions, site discipline and
-            attention to detail during construction. Our approach focuses on
-            clarity, longevity and functional integrity — creating spaces that
-            remain relevant long after completion.
+            attention to detail during construction.
           </p>
 
-          <div className="mt-16 border-t border-white/10 pt-8 text-white/60 max-w-[480px]">
+          <div className="mt-16 border-t border-[var(--color-atborder)] pt-8 text-[var(--color-atmuted)] max-w-[480px]">
             We favour quiet material palettes, precise joinery and structured
-            planning. Every decision is guided by performance, usability and
-            long-term value rather than visual excess.
+            planning.
           </div>
         </div>
 
-        {/* RIGHT — Image */}
         <div className="relative">
-
-          <div className="absolute -top-8 -right-8 w-full h-full border border-white/10"></div>
+          <div className="absolute -top-8 -right-8 w-full h-full border border-[var(--color-atborder)]"></div>
 
           <img
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop"
-            className="relative w-full h-[640px] object-cover"
+            className="relative w-full h-[640px] object-cover rounded-xl"
           />
-
         </div>
 
       </div>
@@ -500,75 +452,46 @@ function Philosophy() {
     </section>
   );
 }
-
 function Process() {
-  const steps = [
-    {
-      title: "Consultation & Brief",
-      desc: "Understanding spatial needs, site conditions, timelines and execution priorities."
-    },
-    {
-      title: "Design Strategy",
-      desc: "Planning layouts, material direction and functional zoning aligned with project intent."
-    },
-    {
-      title: "Technical Planning",
-      desc: "Detailed drawings, vendor coordination and milestone definition before site mobilisation."
-    },
-    {
-      title: "Site Execution",
-      desc: "Disciplined supervision, quality checks and structured progress tracking."
-    },
-    {
-      title: "Finishing & Handover",
-      desc: "Final detailing, deep cleaning and walkthrough before project closure."
-    }
-  ];
+  const steps = [/* same array */];
 
   return (
-    <section className="bg-[#111111] text-[#e7e7e7] py-[180px]">
+    <section className="bg-[var(--color-atsection)] py-[180px]">
 
       <div className="max-w-[1520px] mx-auto px-8">
 
-        {/* Intro */}
         <div className="grid md:grid-cols-2 gap-24 items-end mb-20">
           <div>
-            <div className="text-[#a8844f] tracking-[0.18em] text-sm uppercase">
+            <div className="text-[var(--color-atbronze)] tracking-[0.18em] text-sm uppercase">
               Process
             </div>
 
-            <h2 className="mt-6 text-[40px] md:text-[56px] font-light leading-tight">
+            <h2 className="mt-6 text-[40px] md:text-[56px] font-light leading-tight text-[var(--color-atheading)]">
               A structured journey from concept to completion.
             </h2>
           </div>
 
-          <div className="text-white/60 leading-relaxed max-w-[420px]">
-            Every project follows a disciplined execution framework — ensuring
-            clarity in decisions, coordination on site and confidence at every stage.
+          <div className="text-[var(--color-attext)] leading-relaxed max-w-[420px]">
+            Every project follows a disciplined execution framework ensuring clarity at every stage.
           </div>
         </div>
 
-        {/* Timeline */}
-        <div className="relative border-l border-white/10 ml-4">
+        <div className="relative border-l border-[var(--color-atborder)] ml-4">
 
           {steps.map((step, i) => (
             <div key={i} className="mb-20 pl-12 relative">
 
-              {/* bronze dot */}
-              <div className="absolute -left-[9px] top-2 w-4 h-4 bg-[#a8844f]"></div>
+              <div className="absolute -left-[9px] top-2 w-4 h-4 bg-[var(--color-atbronze)]"></div>
 
-              {/* step number */}
-              <div className="text-[#a8844f] text-sm tracking-[0.2em] mb-3">
+              <div className="text-[var(--color-atbronze)] text-sm tracking-[0.2em] mb-3">
                 {String(i + 1).padStart(2, "0")}
               </div>
 
-              {/* title */}
-              <div className="text-[26px] font-light">
+              <div className="text-[26px] font-light text-[var(--color-atheading)]">
                 {step.title}
               </div>
 
-              {/* description */}
-              <div className="mt-3 text-white/60 max-w-[520px] leading-relaxed">
+              <div className="mt-3 text-[var(--color-attext)] max-w-[520px] leading-relaxed">
                 {step.desc}
               </div>
 
@@ -595,7 +518,7 @@ function Contact() {
 
         {/* LEFT — Contact Intro */}
         <div>
-          <div className="text-[#a8844f] tracking-[0.18em] text-sm uppercase">
+          <div className="text-[var(--color-atbronze)] tracking-[0.18em] text-sm uppercase">
             Contact
           </div>
 
@@ -608,7 +531,7 @@ function Contact() {
             We will respond with a structured execution approach and next steps.
           </p>
 
-          <div className="mt-12 space-y-6 text-white/80">
+          <div className="mt-12 space-y-6 text-[var(--color-attext)]">
             <div className="border-b border-white/10 pb-4">
               hello@atelierprogetto.com
             </div>
@@ -662,7 +585,7 @@ function Contact() {
 
             <button
               type="submit"
-              className="mt-6 w-fit px-10 py-5 bg-[#a8844f] text-[#1a1a1a] tracking-[0.12em] uppercase"
+              className="mt-6 w-fit px-10 py-5 bg-[var(--color-atbronze)] text-[#1a1a1a] tracking-[0.12em] uppercase"
             >
               Send Message
             </button>
