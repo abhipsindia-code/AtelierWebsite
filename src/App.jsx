@@ -15,6 +15,7 @@ export default function App() {
         <Services />
         <DesignLanguage />
         <Philosophy />
+        <Process />
         <Contact />
       </main>
 
@@ -491,6 +492,88 @@ function Philosophy() {
             src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1400&auto=format&fit=crop"
             className="relative w-full h-[640px] object-cover"
           />
+
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
+
+function Process() {
+  const steps = [
+    {
+      title: "Consultation & Brief",
+      desc: "Understanding spatial needs, site conditions, timelines and execution priorities."
+    },
+    {
+      title: "Design Strategy",
+      desc: "Planning layouts, material direction and functional zoning aligned with project intent."
+    },
+    {
+      title: "Technical Planning",
+      desc: "Detailed drawings, vendor coordination and milestone definition before site mobilisation."
+    },
+    {
+      title: "Site Execution",
+      desc: "Disciplined supervision, quality checks and structured progress tracking."
+    },
+    {
+      title: "Finishing & Handover",
+      desc: "Final detailing, deep cleaning and walkthrough before project closure."
+    }
+  ];
+
+  return (
+    <section className="bg-[#111111] text-[#e7e7e7] py-[180px]">
+
+      <div className="max-w-[1520px] mx-auto px-8">
+
+        {/* Intro */}
+        <div className="grid md:grid-cols-2 gap-24 items-end mb-20">
+          <div>
+            <div className="text-[#a8844f] tracking-[0.18em] text-sm uppercase">
+              Process
+            </div>
+
+            <h2 className="mt-6 text-[40px] md:text-[56px] font-light leading-tight">
+              A structured journey from concept to completion.
+            </h2>
+          </div>
+
+          <div className="text-white/60 leading-relaxed max-w-[420px]">
+            Every project follows a disciplined execution framework — ensuring
+            clarity in decisions, coordination on site and confidence at every stage.
+          </div>
+        </div>
+
+        {/* Timeline */}
+        <div className="relative border-l border-white/10 ml-4">
+
+          {steps.map((step, i) => (
+            <div key={i} className="mb-20 pl-12 relative">
+
+              {/* bronze dot */}
+              <div className="absolute -left-[9px] top-2 w-4 h-4 bg-[#a8844f]"></div>
+
+              {/* step number */}
+              <div className="text-[#a8844f] text-sm tracking-[0.2em] mb-3">
+                {String(i + 1).padStart(2, "0")}
+              </div>
+
+              {/* title */}
+              <div className="text-[26px] font-light">
+                {step.title}
+              </div>
+
+              {/* description */}
+              <div className="mt-3 text-white/60 max-w-[520px] leading-relaxed">
+                {step.desc}
+              </div>
+
+            </div>
+          ))}
 
         </div>
 
