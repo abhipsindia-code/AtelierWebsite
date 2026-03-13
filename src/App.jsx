@@ -6,7 +6,7 @@ import { ArrowRight, Mail, Phone } from 'lucide-react'
 // Simple App composed from small components (Header, Hero, Services, Portfolio, Contact, Footer)
 export default function App() {
   return (
-    <div className="min-h-screen mx-auto bg-gray-50 ">
+    <div className="min-h-screen mx-auto bg-[var(--color-atbase)] text-[var(--color-attext)]">
       <Header />
 
       <main className="mx-auto">
@@ -47,7 +47,7 @@ function Header() {
   const containerClass = "max-w-6xl mx-auto p-6 flex items-center justify-between";
 
   // nav link color: white over hero, dark when scrolled
-  const linkClass = scrolled ? "text-slate-700" : "text-white";
+  const linkClass = scrolled ? "text-slate-700" : "text-grey-100";
   const subtleLinkClass = scrolled ? "text-slate-600" : "text-white/90";
 
   return (
@@ -106,7 +106,7 @@ function Header() {
 
 function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#111111] text-[#e7e7e7] flex items-center">
+    <section className="relative min-h-screen bg-[var(--color-atbase)] text-[var(--color-atheading)] flex items-center">
 
       {/* content container */}
       <div className="max-w-[1280px] mx-auto px-8 w-full grid md:grid-cols-2 gap-16 items-center">
@@ -117,10 +117,10 @@ function Hero() {
           <h1 className="text-[48px] md:text-[72px] lg:text-[84px] font-light leading-[1.05] tracking-[-0.02em]">
             Interiors with precision
             <br />
-            <span className="text-[#b08d57] font-medium">crafted to last.</span>
+            <span className="text-[var(--color-atbronze)] font-medium">crafted to last.</span>
           </h1>
 
-          <p className="mt-10 text-[18px] leading-[1.7] text-[#b5b5b5] max-w-[520px]">
+          <p className="mt-10 text-[18px] leading-[1.7] text-[var(--color-atmuted)] max-w-[520px]">
             Execution-led interior studio focused on timelines, material integrity
             and flawless delivery — from concept to final handover.
           </p>
@@ -129,14 +129,14 @@ function Hero() {
           <div className="mt-12 flex items-center gap-8">
             <a
               href="#contact"
-              className="px-8 py-4 bg-[#b08d57] text-black text-[14px] tracking-[0.08em] uppercase"
+              className="px-8 py-4 bg-[var(--color-atbronze)] text-white text-[14px] tracking-[0.08em] uppercase"
             >
               Start a Project
             </a>
 
             <a
               href="#portfolio"
-              className="text-[14px] tracking-[0.12em] uppercase text-[#b5b5b5] hover:text-[#b08d57]"
+              className="text-[14px] tracking-[0.12em] uppercase text-[var(--color-atmuted)] hover:text-[#b08d57]"
             >
               View Portfolio →
             </a>
@@ -157,7 +157,7 @@ function Hero() {
       </div>
 
       {/* GOLD DIVIDER */}
-      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[#b08d57] opacity-60"></div>
+      <div className="absolute bottom-0 left-0 w-full h-[1px] bg-[var(--color-atborder)] opacity-60"></div>
 
     </section>
   );

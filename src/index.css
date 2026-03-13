@@ -4,13 +4,20 @@
 @import "tailwindcss";
 
 /* =========================
-   Brand Theme Tokens
+   Brand Theme Tokens (NEW)
 ========================= */
 @theme {
-  --color-atyellow: #c4a02e;
-  --color-atgrey: #545552;
-  --color-atdark: #1f1f1f;
-  --color-atlight: #f7f7f7;
+  --color-atbase: #F7F5F2;
+  --color-atsection: #EFEAE4;
+  --color-atcard: #FFFFFF;
+
+  --color-atbronze: #C6A87D;
+  --color-atbronze-dark: #B8966B;
+  --color-atborder: #E6DFD8;
+
+  --color-atheading: #2E2E2E;
+  --color-attext: #5A5A5A;
+  --color-atmuted: #8A8A8A;
 }
 
 /* =========================
@@ -25,12 +32,12 @@ body,
 }
 
 /* =========================
-   Global Typography
+   Global Typography (LIGHT THEME)
 ========================= */
 body {
   font-family: "Kumbh Sans", sans-serif;
-  background: var(--color-atdark);
-  color: #e8e8e8;
+  background: var(--color-atbase);
+  color: var(--color-attext);
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -38,7 +45,6 @@ body {
 
 /* =========================
    Container System
-   (very important for premium feel)
 ========================= */
 .container-at {
   max-width: 1280px;
@@ -55,10 +61,11 @@ body {
   letter-spacing: -0.02em;
   line-height: 1.15;
   font-size: clamp(40px, 6vw, 72px);
+  color: var(--color-atheading);
 }
 
 .hero-highlight {
-  color: var(--color-atyellow);
+  color: var(--color-atbronze);
   font-weight: 500;
 }
 
@@ -66,7 +73,7 @@ body {
   margin-top: 24px;
   font-size: 18px;
   line-height: 1.7;
-  color: #bdbdbd;
+  color: var(--color-atmuted);
   max-width: 520px;
   letter-spacing: 0.02em;
 }
@@ -79,52 +86,58 @@ body {
   letter-spacing: 0.18em;
   font-weight: 400;
   font-size: 18px;
+  color: var(--color-atheading);
 }
 
 /* =========================
-   Button System
+   Button System (PREMIUM LIGHT)
 ========================= */
 .btn-primary {
-  background: var(--color-atyellow);
-  color: #111;
+  background: var(--color-atbronze);
+  color: white;
   padding: 14px 22px;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 500;
   letter-spacing: 0.04em;
   transition: all 0.25s ease;
 }
 
 .btn-primary:hover {
-  background: #d4af37;
+  background: var(--color-atbronze-dark);
 }
 
 .btn-outline {
-  border: 1px solid #6b6b6b;
-  color: #e8e8e8;
+  border: 1px solid var(--color-atborder);
+  color: var(--color-atheading);
   padding: 14px 22px;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: all 0.25s ease;
 }
 
 .btn-outline:hover {
-  border-color: var(--color-atyellow);
-  color: var(--color-atyellow);
+  border-color: var(--color-atbronze);
+  color: var(--color-atbronze);
 }
 
 /* =========================  
-   Brannd Text System
-========================= */
-.brand-text {
-  text-transform: uppercase;
-}
-
-
-/* =========================  
-   Section Spacing System
+   Section System
 ========================= */
 .section-at {
   padding-top: 120px;
   padding-bottom: 120px;
+  background: var(--color-atbase);
 }
 
+/* Alternate section */
+.section-soft {
+  background: var(--color-atsection);
+}
 
+/* Card */
+.card-at {
+  background: var(--color-atcard);
+  border: 1px solid var(--color-atborder);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
