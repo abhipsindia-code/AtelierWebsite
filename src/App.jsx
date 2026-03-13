@@ -592,6 +592,15 @@ function Contact() {
                 className="mt-3 w-full bg-transparent border-b border-white/20 pb-3 outline-none focus:border-[#a8844f]"
               />
             </div>
+            <div>
+              <label className="text-sm tracking-[0.12em] text-white/50 uppercase">
+                Number
+              </label>
+              <input
+                name="number"
+                className="mt-3 w-full bg-transparent border-b border-white/20 pb-3 outline-none focus:border-[#a8844f]"
+              />
+            </div>
 
             <div>
               <label className="text-sm tracking-[0.12em] text-white/50 uppercase">
