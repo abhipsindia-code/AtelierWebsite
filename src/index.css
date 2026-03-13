@@ -1,0 +1,130 @@
+/* =========================
+   Tailwind v4 Import
+========================= */
+@import "tailwindcss";
+
+/* =========================
+   Brand Theme Tokens
+========================= */
+@theme {
+  --color-atyellow: #c4a02e;
+  --color-atgrey: #545552;
+  --color-atdark: #1f1f1f;
+  --color-atlight: #f7f7f7;
+}
+
+/* =========================
+   Global Layout Reset
+========================= */
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   Global Typography
+========================= */
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  background: var(--color-atdark);
+  color: #e8e8e8;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   Container System
+   (very important for premium feel)
+========================= */
+.container-at {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* =========================
+   Hero Typography System
+========================= */
+.hero-title {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  font-size: clamp(40px, 6vw, 72px);
+}
+
+.hero-highlight {
+  color: var(--color-atyellow);
+  font-weight: 500;
+}
+
+.hero-sub {
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #bdbdbd;
+  max-width: 520px;
+  letter-spacing: 0.02em;
+}
+
+/* =========================
+   Navbar Branding
+========================= */
+.brand-text {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+/* =========================
+   Button System
+========================= */
+.btn-primary {
+  background: var(--color-atyellow);
+  color: #111;
+  padding: 14px 22px;
+  border-radius: 6px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+}
+
+.btn-primary:hover {
+  background: #d4af37;
+}
+
+.btn-outline {
+  border: 1px solid #6b6b6b;
+  color: #e8e8e8;
+  padding: 14px 22px;
+  border-radius: 6px;
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--color-atyellow);
+  color: var(--color-atyellow);
+}
+
+/* =========================  
+   Brannd Text System
+========================= */
+.brand-text {
+  text-transform: uppercase;
+}
+
+
+/* =========================  
+   Section Spacing System
+========================= */
+.section-at {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+
