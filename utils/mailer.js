@@ -14,6 +14,7 @@ export async function sendContactEmail({ name, email, number, message }) {
   const mailOptions = {
     from: `"Atelier Website" <${process.env.SMTP_USER}>`,
     to: process.env.ADMIN_OTP_INBOX,
+    replyTo: email,
     subject: "New Website Enquiry",
     html: `
       <h2>New Contact Form Submission</h2>
