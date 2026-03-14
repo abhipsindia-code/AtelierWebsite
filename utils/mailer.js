@@ -9,7 +9,14 @@ export async function sendContactEmail({ name, email, number, message }) {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS
     }
-  });
+
+    
+  }
+
+)
+
+console.log(process.env.SMTP_USER);
+console.log(process.env.SMTP_PASS);;
 
   const mailOptions = {
     from: `"Atelier Website" <${process.env.SMTP_USER}>`,
