@@ -8,7 +8,7 @@ export async function sendContactEmail({ name, email, number, message }) {
     port: 465,
     secure: true,
     auth: {
-      user: "hello@yourdomain.com",
+      user: "abhimanyu@psgindia.com",
       pass: process.env.EMAIL_PASS
     }
   });
