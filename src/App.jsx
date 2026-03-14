@@ -427,7 +427,7 @@ function Philosophy() {
           </h2>
 
           <p className="mt-10 text-[var(--color-attext)] leading-relaxed max-w-[520px]">
-            Interior environments are not defined by drawings alone.  
+            Interior environments are not defined by drawings alone.
             They are shaped through material decisions, site discipline and
             attention to detail during construction.
           </p>
@@ -564,12 +564,29 @@ function Contact() {
 
         {/* RIGHT — Form */}
         <form
-          onSubmit={(e) => {
+          onSubmit={async (e) => {
             e.preventDefault();
-            alert("Message sent (demo)");
-          }}
-          className="border border-white/10 p-12"
-        >
+
+            const formData = new FormData(e.target);
+
+            const data = {
+              name: formData.get("name"),
+              email: formData.get("email"),
+              number: formData.get("number"),
+              message: formData.get("message"),
+            };
+
+            const res = await fetch("/api/contact", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify(data),
+            });
+
+            const result = await res.json();
+            alert(result.message);
+          }}>
 
           <div className="grid gap-10">
 
