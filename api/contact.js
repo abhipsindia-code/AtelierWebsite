@@ -7,15 +7,13 @@ export default async function handler(req, res) {
   }
 
   try {
-
     await sendContactEmail(req.body);
 
     return res.status(200).json({ message: "Email sent" });
 
-  } catch (err) {
+  } catch (error) {
+    console.error(error);
 
     return res.status(500).json({ message: "Email failed" });
-
   }
-
 }
