@@ -1,13 +1,21 @@
+import { sendContactEmail } from "../utils/mailer.js";
+
 export default async function handler(req, res) {
+
   if (req.method !== "POST") {
     return res.status(405).json({ message: "Method not allowed" });
   }
 
-  const { name, email, number, message } = req.body;
+  try {
 
-  console.log("New contact:", name, email, number, message);
+    await sendContactEmail(req.body);
 
-  return res.status(200).json({
-    message: "Message received!",
-  });
+    return res.status(200).json({ message: "Email sent" });
+
+  } catch (err) {
+
+    return res.status(500).json({ message: "Email failed" });
+
+  }
+
 }
